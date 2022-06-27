@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint":"eslint ."
+    "test": "jest --watch",
+    "ci:test":"jest --ci",
+    "lint": "eslint ."
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.18.0"
+  },
+  "dependencies": {
+    "jest": "^28.1.1"
   }
 }
