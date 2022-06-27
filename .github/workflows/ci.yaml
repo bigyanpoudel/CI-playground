@@ -10,9 +10,27 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: "npm"
       - name: Install Packages
         run: npm ci
 
       - name: Runs eslint
         run: npm run lint
+  test:
+    name: Test Code base
+    runs-on: [ubuntu-latest]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: "npm"
+      - name: Install Packages
+        run: npm ci
+      - name: Run test
+        run: npm run ci:test

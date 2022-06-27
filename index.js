@@ -1,5 +1,3 @@
-const main = (name, age) => {
-  console.log("hello world", "My name is ", name, "and my age is ", age);
-};
+const main = require("./main");
 
-main("Ram");
+main("Hello wold", 20);
